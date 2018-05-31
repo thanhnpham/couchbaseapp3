@@ -11,7 +11,7 @@ export class CouchbaseProvider {
   private database: Database;
   private listener: EventEmitter<any> = new EventEmitter();
 
-  public constructor(public http: Http, platform: Platform) {
+  public constructor(platform: Platform) {
       if(!this.isInstantiated) {
           platform.ready().then(() => {
               (new Couchbase()).openDatabase("nraboy").then(database => {
