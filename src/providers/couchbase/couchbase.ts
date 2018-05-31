@@ -1,6 +1,6 @@
 import { Injectable, EventEmitter } from '@angular/core';
 import { Http } from '@angular/http';
-import { Platform } from 'ionic-angular';
+import { Platform, AlertController } from 'ionic-angular';
 import { Couchbase, Database } from "cordova-couchbase/core";
 import 'rxjs/add/operator/map';
 
@@ -11,7 +11,7 @@ export class CouchbaseProvider {
   private database: Database;
   private listener: EventEmitter<any> = new EventEmitter();
 
-  public constructor(platform: Platform) {
+  public constructor(platform: Platform, public alertCtrl: AlertController) {
       if(!this.isInstantiated) {
           platform.ready().then(() => {
               (new Couchbase()).openDatabase("nraboy").then(database => {
@@ -31,12 +31,23 @@ export class CouchbaseProvider {
                 });
                   this.isInstantiated = true;
               }, error => {
+                  this.errorHandle(error);
                   console.error(error);
               });
           });
       }
   }
 
+  public errorHandle (error) {
+    let prompt = this.alertCtrl.create( {
+      title: 'Error',
+      message: error,   
+      buttons: [
+        { text: 'Cancel', handler: data => {} }        
+      ]
+    });
+    prompt.present();
+  }
   public getDatabase() {
     return this.database;
   }
