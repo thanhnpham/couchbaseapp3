@@ -18,22 +18,22 @@ export class HomePage {
   }
 
   public ionViewDidEnter() {
-    setTimeout( () => {
-      this.couchbase.getChangeListener().subscribe( data => {
-        for (let i=0; i < data.length; i++) {
-          if (!data[i].hasOwnProperty("deleted") && data[i].id.indexOf("_design") === -1) {
-            this.couchbase.getDatabase().getDocument(data[i].id).then ( result => {
-              if (result.type === "list") {
-                this.zone.run( () => {
-                  this.items.push(result);
-                });
-              }
-            });
-            this.refresh();
-          }
-        }
-      });
-    }, 100);
+    // setTimeout( () => {
+    //   this.couchbase.getChangeListener().subscribe( data => {
+    //     for (let i=0; i < data.length; i++) {
+    //       if (!data[i].hasOwnProperty("deleted") && data[i].id.indexOf("_design") === -1) {
+    //         this.couchbase.getDatabase().getDocument(data[i].id).then ( result => {
+    //           if (result.type === "list") {
+    //             this.zone.run( () => {
+    //               this.items.push(result);
+    //             });
+    //           }
+    //         });
+    //         this.refresh();
+    //       }
+    //     }
+    //   });
+    // }, 100);
   }
   public refresh() {
     this.couchbase.getDatabase().queryView("_design/todo", "items",  {})
