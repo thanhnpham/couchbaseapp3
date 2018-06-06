@@ -28,7 +28,8 @@ export class CouchbaseProvider {
                 this.database.createDesignDocument("_design/todo", views);
                 this.database.listen(change => {
                     this.listener.emit(change.detail);
-                });
+                })
+                this.database.sync("http://vm0.syncgateway-orw6qycbcadui.centralus.cloudapp.azure.com:4985", true);
                 this.isInstantiated = true;
               }, error => {
                   this.errorHandle(error);
