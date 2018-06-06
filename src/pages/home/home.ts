@@ -29,10 +29,10 @@ export class HomePage {
                 });
               }
             });
-            this.refresh();
           }
         }
       });
+      this.refresh();
     }, 100);
   }
   public refresh() {
@@ -60,7 +60,6 @@ export class HomePage {
             this.couchbase.getDatabase().createDocument( 
               {type: 'list', title: data.title}
             );
-            this.refresh();
         }}
       ]
     });

@@ -29,7 +29,7 @@ export class CouchbaseProvider {
                 this.database.listen(change => {
                     this.listener.emit(change.detail);
                 });
-                  this.isInstantiated = true;
+                this.isInstantiated = true;
               }, error => {
                   this.errorHandle(error);
                   console.error(error);
