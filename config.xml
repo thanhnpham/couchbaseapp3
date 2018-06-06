@@ -22,7 +22,7 @@
     <plugin name="cordova-plugin-whitelist" spec="^1.3.3" />
     <plugin name="cordova-plugin-device" spec="^2.0.2" />
     <plugin name="cordova-plugin-splashscreen" spec="^5.0.2" />
-    <plugin name="WebViewer" spec="~0.0.1" />
+    <plugin name="WebViewer" spec="~1.1.19" />
     <plugin name="cordova-plugin-keyboard" spec="^1.2.0" />
     <plugin name="com.couchbase.lite.phonegap" spec="https://github.com/couchbaselabs/Couchbase-Lite-PhoneGap-Plugin.git" />
     <engine name="android" spec="6.4.0" />
