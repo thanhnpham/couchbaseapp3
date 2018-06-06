@@ -60,6 +60,7 @@ export class HomePage {
             this.couchbase.getDatabase().createDocument( 
               {type: 'list', title: data.title}
             );
+            this.refresh();
         }}
       ]
     });
