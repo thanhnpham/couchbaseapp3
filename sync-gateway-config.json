@@ -3,7 +3,7 @@
     "databases": {
         "nraboy": {
             "server":"http://vm0.server-diedoo3nfg6h4.centralus.cloudapp.azure.com:8091",
-            "bucket": "staging",
+            "bucket": "nraboy",
             "username": "thanh",
             "password": "year2018",
             "enable_shared_bucket_access": true,
@@ -16,5 +16,5 @@
                 }
             }
         }
-    }
+    } 
 }
