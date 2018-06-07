@@ -2,7 +2,7 @@
     "log":["CRUD+", "REST+", "Changes+", "Attach+"],
     "databases": {
         "nraboy": {
-            "server":"http://vm0.server-cvy2bxrzvqose.centralus.cloudapp.azure.com:8091",
+            "server":"http://vm0.server-rqygswet76bzq.centralus.cloudapp.azure.com:8091",
             "bucket": "staging",
             "username": "thanh",
             "password": "year2018",
