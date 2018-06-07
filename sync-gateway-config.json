@@ -2,7 +2,12 @@
     "log":["CRUD+", "REST+", "Changes+", "Attach+"],
     "databases": {
         "nraboy": {
-            "server":"walrus:",
+            "server":"http://vm0.server-cvy2bxrzvqose.centralus.cloudapp.azure.com:8091",
+            "bucket": "staging",
+            "username": "thanh",
+            "password": "year2018",
+            "enable_shared_bucket_access": true,
+            "import_docs": "continuous",
             "sync":"function (doc) {channel (doc.channels);}",
             "users": {
                 "GUEST": {
