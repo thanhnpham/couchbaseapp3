@@ -1,9 +1,9 @@
 {
     "log":["CRUD+", "REST+", "Changes+", "Attach+"],
     "databases": {
-        "nraboy": {
-            "server":"http://vm0.server-diedoo3nfg6h4.centralus.cloudapp.azure.com:8091",
-            "bucket": "nraboy",
+        "mydb": {
+            "server":"http://vm0.server-aloz5oofiolao.centralus.cloudapp.azure.com:8091",
+            "bucket": "default",
             "username": "thanh",
             "password": "year2018",
             "enable_shared_bucket_access": true,
