@@ -1,8 +1,7 @@
 {
     "log":["CRUD+", "REST+", "Changes+", "Attach+"],
     "databases": {
-        "mydb": {
-            "server":"http://vm0.server-aloz5oofiolao.centralus.cloudapp.azure.com:8091",            
+        "mydb": {                        
             "sync":"function (doc) {channel (doc.channels);}",
             "users": {
                 "GUEST": {

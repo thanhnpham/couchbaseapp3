@@ -29,7 +29,7 @@ export class CouchbaseProvider {
                 this.database.listen(change => {
                     this.listener.emit(change.detail);
                 })
-                this.database.sync("http://vm0.syncgateway-aloz5oofiolao.centralus.cloudapp.azure.com:4985/nraboy", true);
+                this.database.sync("http://vm0.syncgateway-aloz5oofiolao.centralus.cloudapp.azure.com:4985/mydb", true);
                 this.isInstantiated = true;
               }, error => {
                   this.errorHandle(error);
