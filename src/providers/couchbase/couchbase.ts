@@ -14,7 +14,7 @@ export class CouchbaseProvider {
   public constructor(platform: Platform, public alertCtrl: AlertController) {
       if(!this.isInstantiated) {
           platform.ready().then(() => {
-              (new Couchbase()).openDatabase("nraboy").then(database => {
+              (new Couchbase()).openDatabase("mydb").then(database => {
                   this.database = database;
                   let views = {
                     items: {
