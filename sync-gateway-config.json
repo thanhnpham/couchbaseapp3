@@ -2,12 +2,7 @@
     "log":["CRUD+", "REST+", "Changes+", "Attach+"],
     "databases": {
         "mydb": {
-            "server":"http://vm0.server-aloz5oofiolao.centralus.cloudapp.azure.com:8091",
-            "bucket": "default",
-            "username": "thanh",
-            "password": "year2018",
-            "enable_shared_bucket_access": true,
-            "import_docs": "continuous",
+            "server":"http://vm0.server-aloz5oofiolao.centralus.cloudapp.azure.com:8091",            
             "sync":"function (doc) {channel (doc.channels);}",
             "users": {
                 "GUEST": {
