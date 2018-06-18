@@ -29,8 +29,12 @@ export class CouchbaseProvider {
                 this.database.listen(change => {
                     this.listener.emit(change.detail);
                 })
-                this.database.sync("http://vm0.syncgateway-aloz5oofiolao.centralus.cloudapp.azure.com:4985/mydb", true);
-                this.isInstantiated = true;
+//                this.database.sync("http://vm0.syncgateway-aloz5oofiolao.centralus.cloudapp.azure.com:4985/mydb", true);
+                this.database.sync("http://10.0.2.2:4985/mydb", true);
+//                  this.database.sync("http://172.31.99.209:4985/mydb", true);
+                  this.isInstantiated = true;
+
+                  // testing
               }, error => {
                   this.errorHandle(error);
                   console.error(error);
